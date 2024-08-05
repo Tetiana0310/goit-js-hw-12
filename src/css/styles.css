@@ -15,7 +15,7 @@
   font-weight: 400;
 
   color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  /* background-color: rgba(255, 255, 255, 0.87); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,3 +23,132 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #3c8ecd, #46bbc3, #f2d51c);
+  /* display: flex;
+       justify-content: center;
+       align-items: center; */
+  margin: 0;
+  padding: 100px 0 20px;
+}
+
+.search-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form input {
+  height: 100%;
+  width: 400px;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  padding: 10px 30px 10px 30px;
+  outline: none;
+}
+
+.search-form button {
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 20px;
+  outline: none;
+  padding: 5px 10px 5px 10px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding: 20px 0;
+  margin: -10px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+
+.photo-card {
+  width: calc((100% - 5 * 10px) / 5);
+  margin: 10px;
+  overflow: hidden;
+
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.info-item {
+  margin: 0;
+  font-size: 11px;
+  width: 100%;
+}
+
+.info-item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  background: #fff;
+  box-shadow: -24px 0 #fff, 24px 0 #fff;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -24px 0 #4e75ff, 24px 0 #fff;
+  }
+
+  66% {
+    background: #4e75ff;
+    box-shadow: -24px 0 #fff, 24px 0 #fff;
+  }
+
+  100% {
+    background: #fff;
+    box-shadow: -24px 0 #fff, 24px 0 #4e75ff;
+  }
+}
+
+.hidden {
+  display: none;
+}
+ .load-more {
+   cursor: pointer;
+   text-align: center;
+   border-radius: 20px;
+   outline: none;
+   padding: 5px 10px 5px 10px;
+
+   margin: auto;
+   margin-top: 20px;
+   width: 100px;
+   position: relative;
+   left: 50%;
+   transform: translate(-50%, 0);
+ }
